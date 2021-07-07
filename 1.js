@@ -3,8 +3,11 @@ document.querySelector("#submit").onclick = function (event) {
   let input = document.querySelector('input');
   let el = document.getElementById('name');
   el.innerText = array[0].name;
-  window.alert(input.value === 'google' ? 'Yandex круче. Но это не точно' : input.value)
-  input.value = '';
+  setTimeout(() => {
+      window.alert(input.value === 'google' ? 'Yandex круче. Но это не точно' : input.value)
+      input.value = '';
+    },
+    3000);
 }
 
 const array = [
@@ -29,3 +32,4 @@ const array = [
     age: 54
   },
 ]
+
